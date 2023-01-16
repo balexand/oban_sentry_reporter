@@ -1,13 +1,25 @@
 defmodule ObanSentryReporter.MixProject do
   use Mix.Project
 
+  @version "0.1.0"
+
   def project do
     [
       app: :oban_sentry_reporter,
-      version: "0.1.0",
+      description: "Reports Oban job failures to Sentry.",
+      version: @version,
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: [
+        licenses: ["MIT"],
+        links: %{"GitHub" => "https://github.com/balexand/oban_sentry_reporter"}
+      ],
+      docs: [
+        extras: ["README.md"],
+        source_ref: "v#{@version}",
+        source_url: "https://github.com/balexand/oban_sentry_reporter"
+      ]
     ]
   end
 
@@ -23,7 +35,8 @@ defmodule ObanSentryReporter.MixProject do
   defp deps do
     [
       {:sentry, "~> 8.0"},
-      {:telemetry, "~> 1.0"}
+      {:telemetry, "~> 1.0"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end
