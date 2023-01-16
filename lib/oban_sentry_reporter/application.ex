@@ -8,7 +8,7 @@ defmodule ObanSentryReporter.Application do
   @impl true
   def start(_type, _args) do
     :telemetry.attach(
-      "oban-errors",
+      "oban-sentry-reporter",
       [:oban, :job, :exception],
       &ObanSentryReporter.handle_event/4,
       []
