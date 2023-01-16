@@ -12,7 +12,7 @@ The package can be installed by adding `oban_sentry_reporter` to your list of de
 ```elixir
 def deps do
   [
-    {:oban_sentry_reporter, "~> 0.1"}
+    {:oban_sentry_reporter, "~> 1.0"}
   ]
 end
 ```
