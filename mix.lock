@@ -1,0 +1,4 @@
+%{
+  "sentry": {:hex, :sentry, "8.0.6", "c8de1bf0523bc120ec37d596c55260901029ecb0994e7075b0973328779ceef7", [:mix], [{:hackney, "~> 1.8", [hex: :hackney, repo: "hexpm", optional: true]}, {:jason, "~> 1.1", [hex: :jason, repo: "hexpm", optional: true]}, {:plug, "~> 1.6", [hex: :plug, repo: "hexpm", optional: true]}, {:plug_cowboy, "~> 2.3", [hex: :plug_cowboy, repo: "hexpm", optional: true]}], "hexpm", "051a2d0472162f3137787c7c9d6e6e4ef239de9329c8c45b1f1bf1e9379e1883"},
+  "telemetry": {:hex, :telemetry, "1.2.1", "68fdfe8d8f05a8428483a97d7aab2f268aaff24b49e0f599faa091f1d4e7f61c", [:rebar3], [], "hexpm", "dad9ce9d8effc621708f99eac538ef1cbe05d6a874dd741de2e689c47feafed5"},
+}

@@ -7,10 +7,14 @@ defmodule ObanSentryReporter.Application do
 
   @impl true
   def start(_type, _args) do
-    children = [
-      # Starts a worker by calling: ObanSentryReporter.Worker.start_link(arg)
-      # {ObanSentryReporter.Worker, arg}
-    ]
+    :telemetry.attach(
+      "oban-errors",
+      [:oban, :job, :exception],
+      &ObanSentryReporter.handle_event/4,
+      []
+    )
+
+    children = []
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
