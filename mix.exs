@@ -34,7 +34,7 @@ defmodule ObanSentryReporter.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:sentry, "~> 9.0 or ~> 8.0"},
+      {:sentry, ">= 8.0.0"},
       {:telemetry, "~> 1.0"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
